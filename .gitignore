@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+.venv/
+*.egg
+
+# Environment
+.env
+*.env.local
+
+# Database & Cache
+data/*.db
+data/cache/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/*.log
+
+# Output (generated reports)
+output/*.md
+output/*.json
+
+# Temporary Python scripts
+_write_*.py
+_fix_*.py
+_update_*.py
