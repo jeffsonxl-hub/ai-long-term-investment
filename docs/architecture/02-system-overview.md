@@ -45,7 +45,7 @@ Specialist Agents never call each other.
 | Tool | Type | Purpose |
 |------|------|---------|
 | Indicator Engine | Component | Computes ~110 indicators from financial data. Deterministic, no LLM. The foundation every Agent depends on. |
-| Data Fetcher | Tool | Fetches financial statements + market data from AkShare/Tushare. Timeout 30s, retry 1x. |
+| Data Fetcher | Tool | Fetches financial statements + market data from AkShare. Timeout 30s, retry 1x. |
 | LLM Client | Tool | Wraps DeepSeek API (OpenAI-compatible). Handles rate limiting, retry, token management. |
 | News Scanner | Tool | Lightweight daily scan for Red Flag events on tracked stocks. |
 
@@ -65,7 +65,7 @@ Infrastructure that persists across Agent invocations. Components are determinis
 | Source | Provides | Protocol |
 |--------|----------|----------|
 | AkShare | Financial statements, PE/PB history, sector data, northbound flow, earnings calendar | Python library |
-| Tushare | Fallback for financial data | REST API |
+|  | Fallback for financial data | REST API |
 | SQLite | Local persistence for all memory types | Local file |
 | News APIs | Financial news for Risk Agent Watchdog scan (Phase 14) | REST API |
 ## Communication Patterns
@@ -144,7 +144,7 @@ Config is loaded once at startup into a frozen @dataclass(frozen=True) object. N
 | LLM Provider | DeepSeek API (OpenAI-compatible) | Cost-effective, Chinese-literate |
 | LLM SDK | openai (direct, no LangChain) | Simpler, no unnecessary abstraction |
 | Orchestration | asyncio Pipeline (custom DAG) | Simple fan-out/fan-in, no loops yet |
-| Data | AkShare (primary), Tushare (fallback) | Free, active maintenance, A-share complete |
+| Data | AkShare (primary),  (fallback) | Free, active maintenance, A-share complete |
 | Dashboard | Streamlit (Phase 16) | Pure Python, built-in charts, single-user |
 | Testing | pytest | Standard, inherited from reference project |
 | Config | python-dotenv + frozen dataclass | Immutable after load |

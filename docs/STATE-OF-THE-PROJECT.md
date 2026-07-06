@@ -61,7 +61,7 @@ Completed this session:
 - COMPREHENSIVE_INVESTMENT_FRAMEWORK.md: Domain reference (~110 indicators, 12 dimensions, 3-layer funnel)
 
 Key decisions locked:
-- Technology stack: Python 3.11+, SQLite, DeepSeek API (openai SDK), pure asyncio Pipeline (no LangChain, LangGraph deferred), AkShare + Tushare, Streamlit dashboard (Phase 16), pytest
+- Technology stack: Python 3.11+, SQLite, DeepSeek API (openai SDK), pure asyncio Pipeline (no LangChain, LangGraph deferred), AkShare, Streamlit dashboard (Phase 16), pytest
 - Agent architecture: 10 Agents (1 deterministic Screener + 7 Analysis + 2 Context), Advisor-centric hub-and-spoke topology
 - Output contract: No Naked Recommendations -- every stock carries complete analysis_data package
 - Memory: 4 types (Funnel, Company, Watchlist, Decision)
@@ -69,7 +69,8 @@ Key decisions locked:
 
 ## Next Session
 
-Phase 0 is complete. All design artifacts delivered. Begin Phase 1 -- formal ADR review and approval. Once ADRs are approved, write specs/phase-3-project-bootstrap.md (first SDD spec) and begin Stage 1 (Data Foundation). (remaining: 01-product-vision.md, 02-system-overview.md), then begin Phase 1 formal ADR review and approval.
+Phase 1 -- formal ADR review and approval. Once ADRs pass, write specs/phase-3-project-bootstrap.md (first SDD spec) and begin Stage 1. All design artifacts delivered and pushed to GitHub.
+README.md added. Begin Phase 1 -- formal ADR review and approval. Once ADRs are approved, write specs/phase-3-project-bootstrap.md (first SDD spec) and begin Stage 1 (Data Foundation). (remaining: 01-product-vision.md, 02-system-overview.md), then begin Phase 1 formal ADR review and approval.
 
 ## Implementation Language
 

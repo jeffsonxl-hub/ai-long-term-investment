@@ -32,9 +32,9 @@ Every stock that reaches the deep-research stage gets a complete dossier -- not 
 | Layer | Role |
 |-------|------|
 | **Agent Layer** | 10 Agents (1 deterministic Screener + 7 Analysis + 2 Context) coordinated by a Chief Investment Agent in hub-and-spoke topology |
-| **Tool Layer** | Indicator Engine (110+ deterministic computations), Data Fetcher (AkShare/Tushare), LLM Client (DeepSeek) |
+| **Tool Layer** | Indicator Engine (110+ deterministic computations), Data Fetcher (AkShare), LLM Client (DeepSeek) |
 | **Component Layer** | MemoryRepository (SQLite, 4 memory types), Pipeline (asyncio DAG executor), ConfigLoader, Logger |
-| **Data Layer** | AkShare (primary), Tushare (fallback), SQLite, News APIs |
+| **Data Layer** | AkShare (primary),  (fallback), SQLite, News APIs |
 
 ### 10 Agents
 
@@ -71,7 +71,7 @@ All documented as Architecture Decision Records:
 | Database | SQLite (zero-config, embedded) |
 | LLM | DeepSeek API (OpenAI-compatible, via openai SDK -- no LangChain) |
 | Orchestration | Pure asyncio Pipeline (custom DAG executor, LangGraph deferred) |
-| Data | AkShare (primary), Tushare (fallback) |
+| Data | AkShare (primary),  (fallback) |
 | Dashboard | Streamlit (Phase 16) |
 | Testing | pytest |
 
